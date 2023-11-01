@@ -56,7 +56,12 @@ bool Shape::isOverlapping(const vec2 &point) const {
     // A shape is overlapping a point if the point is within the shape's bounding box.
     // Hint: Even though getLeft, getRight, getTop, and getBottom aren't implemented
     //       in this class, you can still call them from here.
-    return false; // Placeholder for compilation
+    float left = getLeft();
+    float right = getRight();
+    float top = getTop();
+    float bottom = getBottom();
+
+    return (point.x >= left && point.x <= right && point.y >= bottom && point.y <= top);
 }
 
 // Setters
