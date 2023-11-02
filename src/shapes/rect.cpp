@@ -30,9 +30,10 @@ void Rect::draw() const {
 void Rect::initVectors() {
     this->vertices.insert(vertices.end(), {
         // TODO: Add other three corners here
-            0.5f, 0.5f,   // x, y of top right corner
-            -0.5f, 0.5f,  // x, y of top left corner
-            -0.5f, -0.5f  // x, y of bottom left corner
+            -0.5f, 0.5f,   // Top left
+            0.5f, 0.5f,   // Top right
+            -0.5f, -0.5f,  // Bottom left
+            0.5f, -0.5f   // Bottom right
     });
 
     this->indices.insert(indices.end(), {
