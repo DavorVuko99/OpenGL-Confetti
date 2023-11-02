@@ -174,15 +174,16 @@ void Engine::render() {
             // Render font on top of spawn button
             // Render the confetti pieces
 
-            spawnButton->setUniforms();
-            spawnButton->draw();
 
             for (const auto& confetto : confetti) {
                 confetto->setUniforms();
                 confetto->draw();
             }
+            spawnButton->setUniforms();
+            spawnButton->draw();
 
             fontRenderer->renderText("Spawn", spawnButton->getPos().x - 30, spawnButton->getPos().y - 5, 0.5, vec3{1, 1, 1});
+
 
             break;
         }
