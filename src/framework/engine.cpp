@@ -139,6 +139,7 @@ void Engine::processInput() {
 
 }
 
+
 void Engine::update() {
     // Calculate delta time
     float currentFrame = glfwGetTime();
